@@ -1,0 +1,257 @@
+/* SASS */
+/* Imports */
+@import "helpers/_mixins.scss";
+@import "helpers/_reset.scss";
+@import "helpers/_preset.scss";
+@import "reset.css";
+
+/* Variáveis */
+$white: #FFF;
+$fundo: #212629;
+
+
+/* --- Universal --- */
+
+
+@import "compass";
+$social-layout:vertical;
+$social-sprite-dimensions:true;
+@import "sprites/social/*.png";
+@include all-social-sprites;
+
+//#{headings()} { margin: 0; }
+
+
+body { font-family: 'Anton', sans-serif; /*background: url(../img/body-bg.png);*/ background-color: $fundo; }
+object { width: 0; }
+
+::-moz-selection{ background:$fundo; color:#FF8F45; }
+::selection { background:$fundo; color:#FF8F45; }
+
+#page { position: relative; float: left; width: 100%; }
+
+/* --- Typography --- */
+
+h1 { color: $white; font-size: 66px; opacity: 0; margin-top: -20px; }
+h2 { color: #999; text-transform: lowercase; font-size: 45px; opacity: 0; margin-top: 40px; text-align: right; }
+h3 { color: $white; font-size: 32px; margin-bottom: 8px; opacity: 0; }
+
+/* --- Header --- */
+
+#recent { text-align: right; }
+
+header  { position: absolute; }
+/* --- Address --- */
+address { position: absolute; color: #ccc; font-style: normal; }
+
+.max                     { 
+    header{
+        top: 50%; left: 50%; margin: -150px 0 0 -300px; 
+        hgroup div          { 
+            float: left; 
+            img      { 
+                float: right; border: solid 5px $white; opacity: 0; margin-left: 15px;  
+            } 
+        }
+    }
+    address { 
+        top: 0; right: 0; text-align: right; margin: 30px 20px 0 0; 
+    }
+}
+
+.min                            { 
+    position: fixed !important; 
+    header                     { 
+        top: 190px; left: 30px; 
+        h1,h2 { 
+            float: left; clear: both; 
+        }
+        hgroup div img      { 
+            float: right; border: solid 3px $white; margin-top: 3px; 
+        } 
+    }
+    address { 
+        top: 120px; left: 0; text-align: left; margin: 30px 0 0 30px; 
+    }
+}
+
+
+
+#tel, #email, #also, #url { opacity: 0; }
+
+
+/* --- Footer --- */
+/*
+footer {
+position: absolute;
+bottom: 30px;
+left: 50%;
+width: 219px;
+height: 300px;
+margin: 0 0 0 -140px;
+opacity: 0;
+background-image:url("../img/zeno/zeno-html5.png");
+}
+*/
+/* --- Section --- */
+
+//about
+section.about { 
+    position:absolute; bottom: 0; left: 0; margin: 0 0 30px 0px;
+    #aboutme { margin-left: 30px; }
+    ul { 
+        text-align: left; color: #999;
+        li {
+            opacity: 0; margin: 2px 0 0 20px;
+        }
+        a {
+            color: #999; text-decoration: none;
+            &hover { 
+                color: #ccc; 
+            }
+        }
+    }
+}
+
+//projetos
+
+a.fecharProjetos {
+    color: #C63524;
+}
+
+
+#box-projetos { 
+    position: absolute; top: 35px; right: 5px;
+    h3 {
+        opacity: 1; margin-bottom: 10px;
+    }
+    .projeto {
+        height: 200px; margin-bottom: 20px; overflow: hidden; border: solid 3px #333; position: relative; background-color: #eee !important;
+    }
+    .loading {
+        background: url(../img/loader.gif) no-repeat center 110px;
+    }
+    .info {
+        position: absolute;
+    }
+    h4 {
+        padding: 10px 0; background: $fundo; width: 100%; border-bottom: solid 3px #333;
+        span {
+            font-size: 20px;
+            margin-left: 10px; color: #eee; text-transform: uppercase;
+            text-shadow: -1px 2px 0 #666;
+        }
+    }
+    img {
+        border: none; cursor: pointer;
+    }
+}
+
+/* --- Nav --- */
+nav { 
+    position:absolute; bottom: 30px; right: 0; 
+    h3 { 
+        margin-right: 30px; 
+    }
+    ul { 
+        text-align: right;
+        li { 
+            opacity: 0; margin: 2px 20px 0 0; 
+        }
+    }
+    a { 
+        color: #999; text-decoration: none;
+        &hover {
+            color: #ccc;
+        }
+    }
+}
+
+
+/* --- Aside --- */
+
+aside#social {
+    top: 0; left: 0; margin: 30px 0 0 30px; position:absolute;
+    ul {
+        font-size: 16px; 
+        li {
+            display:inline; 
+            float:left; 
+            opacity: 0;
+            margin: 0 10px 10px 0;
+            a{
+                display:block;
+                position:relative;
+                text-decoration:none;
+                strong {
+                    font-weight:normal; 
+                    position:absolute; 
+                    left:20px; top:-1px; 
+                    color:$white;
+                    width: 130px;
+                    padding: 5px 3px;
+                    z-index:9999;
+                    text-shadow:1px 1px 0 rgba(0, 0, 0, 0.75);
+                    background-color:rgba(0, 0, 0, 0.7);
+                    -moz-border-radius:3px;
+                    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+                    -webkit-border-radius:3px;
+                    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+                    border-radius:3px;
+                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+                    opacity: 0;
+                    text-align: center;
+                    filter: alpha(opacity=0);
+                }
+            }
+        }
+    }
+}
+
+/*
+#facebook {  }
+#twitter { background-image:url("../img/social/twitter.png"); }
+#github { background-image:url("../img/social/github.png"); }
+
+#social { position:absolute; top: 0; left: 0; margin: 30px 0 0 30px; }
+
+#social ul {
+font-size: 16px; 
+}
+
+#social ul li { 
+display:inline; 
+float:left; 
+background-repeat:no-repeat; 
+opacity: 0;
+}
+
+#social ul li a {
+display:block;
+width:48px; 
+height:48px; 
+padding-right:10px; 
+position:relative; 
+text-decoration:none;
+}
+
+#social ul li a strong {
+font-weight:normal; 
+position:absolute; 
+left:20px; top:-1px; 
+color:$white;
+padding:3px;
+z-index:9999;
+text-shadow:1px 1px 0 rgba(0, 0, 0, 0.75);
+background-color:rgba(0, 0, 0, 0.7);
+-moz-border-radius:3px;
+-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+-webkit-border-radius:3px;
+-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+border-radius:3px;
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+opacity: 0;
+filter: alpha(opacity=0);
+}
+
+*/
