@@ -1,6 +1,6 @@
 $(window).load(function(){
     $("#page").css('height',$(window).height()+"px");
-//$('#projects li a').trigger('click');
+    //$('#projects li a').trigger('click');
 });
   
 $(window).resize(function(){
@@ -17,7 +17,6 @@ function redimensionaProjetos(){
 }
 
 (function($) {
-  
     $('.fecharProjetos').live('click',function(e){
         e.preventDefault();
         if ($('#page').attr('class') == 'max') {

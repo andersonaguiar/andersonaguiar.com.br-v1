@@ -5,14 +5,12 @@
 @import "helpers/_preset.scss";
 @import "reset.css";
 
-/* Variáveis */
+/* Variaveis */
 $white: #FFF;
 $fundo: #212629;
 
 
 /* --- Universal --- */
-
-
 @import "compass";
 $social-layout:vertical;
 $social-sprite-dimensions:true;
@@ -80,21 +78,6 @@ address { position: absolute; color: #ccc; font-style: normal; }
 #tel, #email, #also, #url { opacity: 0; }
 
 
-/* --- Footer --- */
-/*
-footer {
-position: absolute;
-bottom: 30px;
-left: 50%;
-width: 219px;
-height: 300px;
-margin: 0 0 0 -140px;
-opacity: 0;
-background-image:url("../img/zeno/zeno-html5.png");
-}
-*/
-/* --- Section --- */
-
 //about
 section.about { 
     position:absolute; bottom: 0; left: 0; margin: 0 0 30px 0px;
@@ -106,7 +89,7 @@ section.about {
         }
         a {
             color: #999; text-decoration: none;
-            &hover { 
+            &:hover { 
                 color: #ccc; 
             }
         }
@@ -118,7 +101,6 @@ section.about {
 a.fecharProjetos {
     color: #C63524;
 }
-
 
 #box-projetos { 
     position: absolute; top: 35px; right: 5px;
@@ -161,7 +143,7 @@ nav {
     }
     a { 
         color: #999; text-decoration: none;
-        &hover {
+        &:hover {
             color: #ccc;
         }
     }
@@ -169,7 +151,6 @@ nav {
 
 
 /* --- Aside --- */
-
 aside#social {
     top: 0; left: 0; margin: 30px 0 0 30px; position:absolute;
     ul {
@@ -207,51 +188,3 @@ aside#social {
         }
     }
 }
-
-/*
-#facebook {  }
-#twitter { background-image:url("../img/social/twitter.png"); }
-#github { background-image:url("../img/social/github.png"); }
-
-#social { position:absolute; top: 0; left: 0; margin: 30px 0 0 30px; }
-
-#social ul {
-font-size: 16px; 
-}
-
-#social ul li { 
-display:inline; 
-float:left; 
-background-repeat:no-repeat; 
-opacity: 0;
-}
-
-#social ul li a {
-display:block;
-width:48px; 
-height:48px; 
-padding-right:10px; 
-position:relative; 
-text-decoration:none;
-}
-
-#social ul li a strong {
-font-weight:normal; 
-position:absolute; 
-left:20px; top:-1px; 
-color:$white;
-padding:3px;
-z-index:9999;
-text-shadow:1px 1px 0 rgba(0, 0, 0, 0.75);
-background-color:rgba(0, 0, 0, 0.7);
--moz-border-radius:3px;
--moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
--webkit-border-radius:3px;
--webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-border-radius:3px;
-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-opacity: 0;
-filter: alpha(opacity=0);
-}
-
-*/
