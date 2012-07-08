@@ -45,15 +45,15 @@
 
         <aside id="social">
             <ul>
-                <li><a class="social-facebook" target="_blank" href="http://www.facebook.com/andersonaguiarrr"><strong>Facebook</strong></a></li>
-                <li><a class="social-twitter" target="_blank" href="http://twitter.com/andersonaguiar"><strong>Twitter</strong></a></li>
-                <li><a class="social-github" target="_blank" href="http://github.com/andersonaguiar"><strong>Github</strong></a></li>
-                <li><a class="social-skype" href="skype:and-aguiar?add"><strong>Skype: and-aguiar</strong></a></li>
-                <?php /* <li><a class="social-gtalk" href="skype:and-aguiar?add"><strong>Skype: and-aguiar</strong></a></li> */ ?>
-                <li><a class="social-msn" onlick="javascript:void(0);" href="MSN:and-aguiar@hotmail.com"><strong>and-aguiar@hotmail.com</strong></a></li> 
-                <li><a class="social-slideshare" target="_blank" href="http://www.slideshare.net/andersonagr"><strong>Slideshare</strong></a></li>
-                <li><a class="social-linkedin" target="_blank" href="http://www.linkedin.com/profile/view?id=58701821"><strong>Linkedin</strong></a></li>
-                <li><a class="social-googleplus" target="_blank" href="https://plus.google.com/u/0/110862934856408781799"><strong>Google+</strong></a></li>
+                <li><a class="social-facebook" target="_blank" href="http://www.facebook.com/andersonaguiarrr" title="Facebook"></a></li>
+                <li><a class="social-twitter" target="_blank" href="http://twitter.com/andersonaguiar" title="Twitter"></a></li>
+                <li><a class="social-github" target="_blank" href="http://github.com/andersonaguiar" title="Github"></a></li>
+                <li><a class="social-skype" href="skype:and-aguiar?add" title="Skype"></a></li>
+                <?php /* <li><a class="social-gtalk" href="skype:and-aguiar?add" title="Skype: and-aguiar"></a></li> */ ?>
+                <li><a class="social-msn" onlick="javascript:void(0);" href="MSN:and-aguiar@hotmail.com" title="MSN"></a></li> 
+                <li><a class="social-slideshare" target="_blank" href="http://www.slideshare.net/andersonagr" title="Slideshare"></a></li>
+                <li><a class="social-linkedin" target="_blank" href="http://www.linkedin.com/profile/view?id=58701821" title="Linkedin"></a></li>
+                <li><a class="social-googleplus" target="_blank" href="https://plus.google.com/u/0/110862934856408781799" title="Google+"></a></li>
 
             </ul>
         </aside>

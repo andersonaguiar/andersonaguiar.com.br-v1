@@ -28,6 +28,7 @@ object { width: 0; }
 
 #page { position: relative; float: left; width: 100%; }
 
+
 /* --- Typography --- */
 
 h1 { color: $white; font-size: 66px; opacity: 0; margin-top: -20px; }
@@ -42,18 +43,23 @@ header  { position: absolute; }
 /* --- Address --- */
 address { position: absolute; color: #ccc; font-style: normal; }
 
-.max                     { 
-    header{
-        top: 50%; left: 50%; margin: -150px 0 0 -300px; 
-        hgroup div          { 
-            float: left; 
-            img      { 
-                float: right; border: solid 5px $white; opacity: 0; margin-left: 15px;  
-            } 
+/* --- Aside --- */
+aside#social {
+    top: 0; left: 0; margin: 30px 0 0 30px; position:absolute;
+    ul {
+        font-size: 16px; 
+        li {
+            display:inline; 
+            float:left; 
+            opacity: 0;
+            margin: 0 10px 10px 0;
+            a{
+                display:block;
+                position:relative;
+                text-decoration:none;
+                
+            }
         }
-    }
-    address { 
-        top: 0; right: 0; text-align: right; margin: 30px 20px 0 0; 
     }
 }
 
@@ -80,12 +86,12 @@ address { position: absolute; color: #ccc; font-style: normal; }
 
 //about
 section.about { 
-    position:absolute; bottom: 0; left: 0; margin: 0 0 30px 0px;
-    #aboutme { margin-left: 30px; }
+    position:absolute; bottom: 0; left: 0; margin: 0 0 30px 30px;
     ul { 
+        padding: 0;
         text-align: left; color: #999;
         li {
-            opacity: 0; margin: 2px 0 0 20px;
+            opacity: 0; margin: 2px 0 0 0;
         }
         a {
             color: #999; text-decoration: none;
@@ -96,12 +102,90 @@ section.about {
     }
 }
 
+
+
+/* --- Nav --- */
+nav { 
+    position:absolute; bottom: 30px; right: 0; 
+    h3 { 
+        margin-right: 30px; 
+    }
+    ul { 
+        text-align: right;
+        li { 
+            opacity: 0; 
+        }
+    }
+    a { 
+        color: #999; text-decoration: none;
+        &:hover {
+            color: #ccc;
+        }
+    }
+}
+
+
+
+   
+
+@media screen and (max-width: 740px) {
+
+    h1 { font-size: 32px; }
+    h2 { font-size: 17px; }
+
+    header                     { 
+        top: 40%; left: 30px; 
+        h1,h2 { 
+            float: left; clear: both; 
+        }
+        hgroup div img      { 
+            float: right; border: solid 3px $white; margin-top: 3px; 
+        } 
+    }
+    address { 
+        top: 120px; left: 0; text-align: left; margin: 30px 0 0 30px; 
+    }
+
+    nav     { display: none;left: 0; bottom: -70px; left: 30px; }
+    nav h3  { float: left; }
+    nav ul  { clear: both; float: left; }
+
+}
+
+@media only screen and (min-width: 741px) {
+
+    .max                     { 
+        header{
+            top: 35%; left: 85%; margin-left: -573px;
+            hgroup div          { 
+                float: left; 
+                img      { 
+                    float: right; border: solid 5px $white; opacity: 0; margin-left: 15px;  
+                } 
+            }
+        }
+        address { 
+            top: 0; right: 0; text-align: right; margin: 30px 20px 0 0; 
+        }
+    }
+
+}
+
+@media only screen and (min-width: 900px) {
+    .max                     { 
+        header{
+            left: 75%;
+        }
+    }
+}
+
 //projetos
 
 a.fecharProjetos {
     color: #C63524;
 }
 
+//aberto via JS
 #box-projetos { 
     position: absolute; top: 35px; right: 5px;
     h3 {
@@ -126,65 +210,5 @@ a.fecharProjetos {
     }
     img {
         border: none; cursor: pointer;
-    }
-}
-
-/* --- Nav --- */
-nav { 
-    position:absolute; bottom: 30px; right: 0; 
-    h3 { 
-        margin-right: 30px; 
-    }
-    ul { 
-        text-align: right;
-        li { 
-            opacity: 0; margin: 2px 20px 0 0; 
-        }
-    }
-    a { 
-        color: #999; text-decoration: none;
-        &:hover {
-            color: #ccc;
-        }
-    }
-}
-
-
-/* --- Aside --- */
-aside#social {
-    top: 0; left: 0; margin: 30px 0 0 30px; position:absolute;
-    ul {
-        font-size: 16px; 
-        li {
-            display:inline; 
-            float:left; 
-            opacity: 0;
-            margin: 0 10px 10px 0;
-            a{
-                display:block;
-                position:relative;
-                text-decoration:none;
-                strong {
-                    font-weight:normal; 
-                    position:absolute; 
-                    left:20px; top:-1px; 
-                    color:$white;
-                    width: 130px;
-                    padding: 5px 3px;
-                    z-index:9999;
-                    text-shadow:1px 1px 0 rgba(0, 0, 0, 0.75);
-                    background-color:rgba(0, 0, 0, 0.7);
-                    -moz-border-radius:3px;
-                    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-                    -webkit-border-radius:3px;
-                    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-                    border-radius:3px;
-                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-                    opacity: 0;
-                    text-align: center;
-                    filter: alpha(opacity=0);
-                }
-            }
-        }
     }
 }
