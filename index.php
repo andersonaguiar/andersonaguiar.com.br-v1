@@ -75,7 +75,7 @@
             <ul>
                 <li>&gt; 23 anos</li>
                 <li>&gt; nascido em Tubarão/SC</li>
-                <li>&gt; <a target="_blank" href="http://www.sc.senai.br">Web Developer at SENAI/SC - Tubarão</a></li>
+                <li>&gt; <a target="_blank" href="http://www.admt.com.br">Web Developer at ADMT</a></li>
             </ul>
         </section>
 
