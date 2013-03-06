@@ -1,0 +1,71 @@
+# -------------------------------- #
+# Habilita o Mod Rewrite do Apache #
+# -------------------------------- #
+RewriteEngine On
+
+#Endereço base
+RewriteBase /projetos/Pessoal/andersonaguiar.com.br
+
+# ----------------------------- #
+# Paginas de Erros customizadas #
+# ----------------------------- #
+ErrorDocument 404 /~andersonaguiar/projetos/Pessoal/andersonaguiar.com.br/404.php
+
+RewriteRule ^$ index.php?page=capa [L,QSA]
+RewriteRule ^portifolio/?$ index.php?page=portifolio [L,QSA]
+
+# ------------------------------------------------------------------ #
+# Desabilita todo e qualquer tipo de acesso para realizar manutencao #
+# ------------------------------------------------------------------ #
+#RewriteRule ^(.*)$ _phpinfo.php [L]
+
+# ------------------------------------------ #
+# Recursos do site (css, img, js, swf, libs) #
+# ------------------------------------------ #
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule css/(.+)\.css/?$ css/$1.css [L]
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule js/(.+)\.js/?$ js/$1.js [L]
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule img/(.+)\.(jpg|gif|png|ico)$ img/$1.$2 [L]
+
+
+FileETag MTime Size
+<ifmodule mod_expires.c>
+  <filesmatch "\.(jpg|gif|png|css|js)$">
+       ExpiresActive on
+       ExpiresDefault "access plus 1 year"
+   </filesmatch>
+</ifmodule>
+
+
+# ------------------------------------ #
+#            SEGURANCA                 #
+# ------------------------------------ #
+    # -------------------------------- #
+    #não permite acesso ao arquivo htaccess
+    # -------------------------------- #
+    <files .htaccess>
+        order allow,deny
+        deny from all
+    </files>
+
+    # -------------------------------- #
+    #inibi listagem dos arquivos de todos os diretórios
+    # -------------------------------- #
+    Options -Indexes
+
+    # -------------------------------- #
+    #desabilita alguns arquivos da raiz
+    # -------------------------------- #
+    #<Files ~ "(\.php)$">
+    #Order allow,Deny
+    #Deny from all
+    #Allow from 192.168.1.1
+    #</Files>
+# ------------------------------------ #

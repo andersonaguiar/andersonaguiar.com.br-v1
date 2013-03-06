@@ -1,0 +1,154 @@
+@media screen and (max-width: 360px) {
+
+    .contact { 
+        margin: 5% 0;
+        clear: both;
+        text-align: center;
+        p {
+            float: none;
+            clear: both;
+        }
+    }
+
+    .main {
+        position: static;
+        clear: both;
+        text-align: center;
+        overflow: hidden;
+        section {
+            overflow: hidden;
+            hgroup { 
+                text-align: center;
+                h1, h2 {
+
+                }
+            }
+            .img-anderson {
+                text-align: center;
+                img { 
+                    border: solid 3px $branco; margin-top: 3px; 
+                } 
+            }
+        }
+    }
+
+    .sobre, .trabalhos {
+        text-align: center;
+    }
+    .sobre {
+        margin: 5% 0;
+    }
+
+    .trabalhos {
+        text-align: center;
+    }
+
+}
+
+@media only screen and (min-width: 361px) {
+
+    aside#social {
+        text-align: center;
+    }
+
+    .contact { 
+        margin: 5% 0;
+        clear: both;
+        text-align: center;
+        p {
+            float: none;
+            clear: both;
+        }
+    }
+
+    .main {
+        position: static;
+        clear: both;
+        text-align: center;
+        overflow: hidden;
+        section {
+            overflow: hidden;
+            text-align: center;
+            hgroup { 
+                text-align: center;
+                h1, h2 {
+
+                }
+            }
+            .img-anderson {
+                text-align: center;
+                img { 
+                    border: solid 3px $branco; margin-top: 3px; 
+                } 
+            }
+        }
+    }
+
+    .sobre, .trabalhos {
+        text-align: center;
+    }
+    .sobre {
+        margin: 5% 0;
+    }
+
+    .trabalhos {
+        text-align: center;
+    }
+
+}
+
+@media only screen and (min-width: 761px) {
+
+    aside#social {
+        text-align: left;
+    }
+
+    .contact { 
+        margin-top: 0;
+        clear: none;
+        float: right; 
+        p {
+            float: right;
+            clear: both;
+        }
+    }
+
+    .main {
+        position: absolute;
+        top: 50%;
+        margin-top: -80px;
+        text-align: center;
+        overflow: hidden;
+        section {
+            overflow: hidden;
+            hgroup { 
+                text-align: right;
+                h1, h2 {
+
+                }
+            }
+            .img-anderson {
+                text-align: left;
+                img { 
+                    border: solid 3px $branco; margin-top: 3px; 
+                } 
+            }
+        }
+    }
+
+    .sobre, .trabalhos {
+        position: absolute;
+        text-align: left;
+        bottom: 0;
+    }
+    .sobre {
+        left: 0;
+        margin: 0;
+    }
+
+    .trabalhos {
+        right: 0;
+        text-align: right;
+    }
+
+}

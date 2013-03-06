@@ -1,14 +1,11 @@
 /* SASS */
 /* Imports */
+@import "helpers/_vars.scss";
 @import "helpers/_mixins.scss";
-@import "helpers/_reset.scss";
-@import "helpers/_preset.scss";
+@import "helpers/_fonts.scss";
+@import "helpers/_spaces.scss";
+@import "helpers/_classes.scss";
 @import "reset.css";
-
-/* Variaveis */
-$white: #FFF;
-$fundo: #212629;
-
 
 /* --- Universal --- */
 @import "compass";
@@ -17,198 +14,76 @@ $social-sprite-dimensions:true;
 @import "sprites/social/*.png";
 @include all-social-sprites;
 
-//#{headings()} { margin: 0; }
+body { font-family: 'Anton', sans-serif; background-color: $fundo; }
 
 
-body { font-family: 'Anton', sans-serif; /*background: url(../img/body-bg.png);*/ background-color: $fundo; }
-object { width: 0; }
+//div[class^='grid_'] { background: #666;  }
 
-::-moz-selection{ background:$fundo; color:#FF8F45; }
-::selection { background:$fundo; color:#FF8F45; }
+::-moz-selection    { background:$fundo; color:#FF8F45; }
+::selection         { background:$fundo; color:#FF8F45; }
 
-#page { position: relative; float: left; width: 100%; }
+//debug
+//div[class^="grid_"] { background: rgba(188, 32, 50, .5); overflow: hidden; }
 
+//fontes
+h1      { color: $branco; }
+h2      { color: $cinza; text-transform: lowercase; }
+h3      { color: $cinza; text-transform: lowercase; }
+ul li   { color: $cinza; font-size: 18px; }
+a       { color: #FFF; }
 
-/* --- Typography --- */
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: #000; 
+    width: 100%;
+}
 
-h1 { color: $white; font-size: 66px; opacity: 0; margin-top: -20px; }
-h2 { color: #999; text-transform: lowercase; font-size: 45px; opacity: 0; margin-top: 40px; text-align: right; }
-h3 { color: $white; font-size: 32px; margin-bottom: 8px; opacity: 0; }
-
-/* --- Header --- */
-
-#recent { text-align: right; }
-
-header  { position: absolute; }
-/* --- Address --- */
-address { position: absolute; color: #ccc; font-style: normal; }
-
-/* --- Aside --- */
-aside#social {
-    top: 0; left: 0; margin: 30px 0 0 30px; position:absolute;
-    ul {
-        font-size: 16px; 
-        li {
-            display:inline; 
-            float:left; 
-            opacity: 0;
-            margin: 0 10px 10px 0;
-            a{
-                display:block;
-                position:relative;
-                text-decoration:none;
-                
+#page {
+    position: relative;
+    aside#social {
+        margin-top: 10px;
+        ul {
+            font-size: 16px; 
+            li {
+                display:inline-block; 
+                a{
+                    display:block;
+                    position:relative;
+                    text-decoration:none;
+                }
             }
         }
     }
-}
-
-.min                            { 
-    position: fixed !important; 
-    header                     { 
-        top: 190px; left: 30px; 
-        h1,h2 { 
-            float: left; clear: both; 
-        }
-        hgroup div img      { 
-            float: right; border: solid 3px $white; margin-top: 3px; 
-        } 
-    }
-    address { 
-        top: 120px; left: 0; text-align: left; margin: 30px 0 0 30px; 
-    }
-}
-
-
-
-#tel, #email, #also, #url { opacity: 0; }
-
-
-//about
-section.about { 
-    position:absolute; bottom: 0; left: 0; margin: 0 0 30px 30px;
-    ul { 
-        padding: 0;
-        text-align: left; color: #999;
-        li {
-            opacity: 0; margin: 2px 0 0 0;
-        }
-        a {
-            color: #999; text-decoration: none;
-            &:hover { 
-                color: #ccc; 
-            }
+    address {
+        margin-top: 10px;
+        p {
+            margin-bottom: 2%;
+            font-size: 22px;
+            color: $cinza;
         }
     }
 }
 
-
-
-/* --- Nav --- */
-nav { 
-    position:absolute; bottom: 30px; right: 0; 
-    h3 { 
-        margin-right: 30px; 
-    }
-    ul { 
-        text-align: right;
-        li { 
-            opacity: 0; 
+.div404 {
+    margin: 20px auto;
+    width: 308px;
+    text-align: center;
+    a {
+        display: block;
+        img {
+            border: solid 4px #FFF;
         }
     }
-    a { 
-        color: #999; text-decoration: none;
-        &:hover {
-            color: #ccc;
-        }
+    p {
+        margin: 20px 0;
+        color: #FF8F45;
+        font-size: 25px;
     }
 }
 
-
-
-   
-
-@media screen and (max-width: 740px) {
-
-    h1 { font-size: 32px; }
-    h2 { font-size: 17px; }
-
-    header                     { 
-        top: 40%; left: 30px; 
-        h1,h2 { 
-            float: left; clear: both; 
-        }
-        hgroup div img      { 
-            float: right; border: solid 3px $white; margin-top: 3px; 
-        } 
-    }
-    address { 
-        top: 120px; left: 0; text-align: left; margin: 30px 0 0 30px; 
-    }
-
-    nav     { display: none;left: 0; bottom: -70px; left: 30px; }
-    nav h3  { float: left; }
-    nav ul  { clear: both; float: left; }
-
-}
-
-@media only screen and (min-width: 741px) {
-
-    .max                     { 
-        header{
-            top: 35%; left: 85%; margin-left: -573px;
-            hgroup div          { 
-                float: left; 
-                img      { 
-                    float: right; border: solid 5px $white; opacity: 0; margin-left: 15px;  
-                } 
-            }
-        }
-        address { 
-            top: 0; right: 0; text-align: right; margin: 30px 20px 0 0; 
-        }
-    }
-
-}
-
-@media only screen and (min-width: 900px) {
-    .max                     { 
-        header{
-            left: 75%;
-        }
-    }
-}
-
-//projetos
-
-a.fecharProjetos {
-    color: #C63524;
-}
-
-//aberto via JS
-#box-projetos { 
-    position: absolute; top: 35px; right: 5px;
-    h3 {
-        opacity: 1; margin-bottom: 10px;
-    }
-    .projeto {
-        height: 200px; margin-bottom: 20px; overflow: hidden; border: solid 3px #333; position: relative; background-color: #eee !important;
-    }
-    .loading {
-        background: url(../img/loader.gif) no-repeat center 110px;
-    }
-    .info {
-        position: absolute;
-    }
-    h4 {
-        padding: 10px 0; background: $fundo; width: 100%; border-bottom: solid 3px #333;
-        span {
-            font-size: 20px;
-            margin-left: 10px; color: #eee; text-transform: uppercase;
-            text-shadow: -1px 2px 0 #666;
-        }
-    }
-    img {
-        border: none; cursor: pointer;
-    }
+em {
+    color: #666;
 }

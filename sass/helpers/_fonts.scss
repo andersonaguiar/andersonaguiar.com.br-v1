@@ -1,0 +1,60 @@
+/* --- Typography --- */
+
+@media screen and (min-device-width : 320px) and (max-device-width : 800px) {
+    h1 { font-size: 70px; }
+    h2 { font-size: 45px; }
+    h3 { font-size: 25px; }
+    address {
+        p {
+            font-size: 15px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 260px) {
+
+    h1 { font-size: 25px; }
+    h2 { font-size: 20px; }
+    h3 { font-size: 25px; }
+    address {
+        p {
+            font-size: 15px !important;
+        }
+    }
+}
+
+@media screen and (min-width: 261px) {
+
+    h1 { font-size: 30px; }
+    h2 { font-size: 25px; }
+    h3 { font-size: 25px; }
+}
+
+@media only screen and (min-width: 361px) {
+
+    h1 { font-size: 30px; }
+    h2 { font-size: 25px; }
+    h3 { font-size: 25px; }
+}
+
+@media only screen and (min-width: 761px) {
+
+    h1 { font-size: 40px; }
+    h2 { font-size: 35px; }
+    h3 { font-size: 25px; }
+}
+
+@media only screen and (min-width: 981px) {
+
+    h1 { font-size: 50px; }
+    h2 { font-size: 45px; }
+    h3 { font-size: 25px; }
+}
+
+@media only screen and (min-width: 1281px) {
+
+    h1 { font-size: 70px; }
+    h2 { font-size: 45px; }
+    h3 { font-size: 25px; }
+    
+}
