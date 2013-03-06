@@ -6,10 +6,9 @@
         <li><a class="social-twitter" target="_blank" href="http://twitter.com/andersonaguiar" title="Twitter"></a></li>
         <li><a class="social-github" target="_blank" href="http://github.com/andersonaguiar" title="Github"></a></li>
         <li><a class="social-skype" href="skype:and-aguiar?add" title="Skype"></a></li>
-        <li><a class="social-msn" onlick="javascript:void(0);" href="MSN:and-aguiar@hotmail.com" title="MSN"></a></li> 
         <li><a class="social-slideshare" target="_blank" href="http://www.slideshare.net/andersonagr" title="Slideshare"></a></li>
         <li><a class="social-linkedin" target="_blank" href="http://www.linkedin.com/profile/view?id=58701821" title="Linkedin"></a></li>
-        <li><a class="social-googleplus" target="_blank" href="https://plus.google.com/u/0/110862934856408781799" title="Google+"></a></li>
+        <li><a class="social-googleplus" target="_blank" href="https://plus.google.com/u/0/110862934856408781799?rel=author" title="Google+"></a></li>
       </ul>
     </aside>
   </div>
@@ -46,7 +45,7 @@
       <ul>
         <li>&gt; 23 anos</li>
         <li>&gt; nascido em Tubarão/SC</li>
-        <li>&gt; <a title="Web Developer na ADMT" target="_blank" href="http://www.admt.com.br">Web Developer na ADMT</a></li>
+        <li>&gt; <a title="Web Developer" target="_blank" href="">Web Developer</a></li>
       </ul>
     </section>
   </div>
