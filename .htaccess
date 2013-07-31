@@ -9,7 +9,7 @@ RewriteBase /GitHub/andersonaguiar.com.br
 # ----------------------------- #
 # Paginas de Erros customizadas #
 # ----------------------------- #
-#ErrorDocument 404 /~andersonaguiar/projetos/Pessoal/andersonaguiar.com.br/404.php
+##ErrorDocument 404 /~andersonaguiar/projetos/Pessoal/andersonaguiar.com.br/404.php
 
 RewriteRule ^$ index.php?page=capa [L,QSA]
 RewriteRule ^portifolio/?$ index.php?page=portifolio [L,QSA]
