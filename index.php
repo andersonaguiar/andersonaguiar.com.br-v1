@@ -1,7 +1,7 @@
 <?php
   $urlBase = 'http://localhost/projetos/Pessoal/andersonaguiar.com.br/';
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <!--[if !IE]> 
 <html lang="pt-BR">    
 <![endif]-->
